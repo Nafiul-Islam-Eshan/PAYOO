@@ -11,18 +11,19 @@
 
 document.querySelector("#btn-cashout").addEventListener("click",function(event){
     // 1- Get the agent number and validate
-    const agentNumberInput = document.querySelector("#cashout-number");
-    const agentNumber = agentNumberInput.value;
+    const agentNumber = giveIdTakeInputValue("cashout-number");
     console.log("Agent Number: ",agentNumber);
+    if(agentNumber.length !== 11 ){
+        alert("Invalid Phone Number");
+        return;
+    }
 
     // 2- Get the amount, validate, convert to number
-    const casoutAmountInput = document.querySelector("#cashout-amount");
-    const casoutAmount = casoutAmountInput.value;
+    const casoutAmount = Number(giveIdTakeInputValue("cashout-amount")) ;
     console.log("Cash out amount:",casoutAmount);
 
     // 3- Get the current balance, validate, convert to number
-    const balanceElement = document.getElementById('balance');
-    let balance = balanceElement.innerText ;
+    balance = getBalance();
     console.log("Balance:",balance)
 
     // 4- Calculate new balance
@@ -33,14 +34,13 @@ document.querySelector("#btn-cashout").addEventListener("click",function(event){
     } 
 
     // 5- Get the password and verify
-    const cashoutPasswordInput = document.getElementById("cashout-password");
-    const cashoutPassword = cashoutPasswordInput.value;
+    const cashoutPassword = giveIdTakeInputValue("cashout-password") ;
     console.log("Password:",cashoutPassword);
      
     // 5-1 true:: show an alert and set new balance
     if (cashoutPassword == "1234"){
         alert("Cash out successful ✅");
-        balanceElement.innerText = Number(newBalance);
+        setBalance(newBalance);
         console.log("New Balance:",newBalance);
     }
 
