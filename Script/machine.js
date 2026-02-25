@@ -17,3 +17,15 @@ function setBalance(value){
     const balanceElement = document.getElementById('balance');
     balanceElement.innerText = value;
 }
+
+// Showing form when button is clicked
+function showUpById(id){
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+    const showup = document.getElementById(id);
+
+    addMoney.classList.add("hidden")
+    cashout.classList.add("hidden")
+    showup.classList.remove("hidden");
+
+}
