@@ -41,7 +41,11 @@ document.querySelector("#btn-cashout").addEventListener("click",function(event){
      
     // 5-1 true:: show an alert and set new balance
     if (cashoutPassword == "1234"){
-        alert("Cash out successful ✅");
+        const d = new Date()
+        const date = d.toLocaleDateString("en-GB");
+        const time = d.toLocaleTimeString("en-GB");
+
+        alert(`Cashout successful at ${time} on ${date} ✅`);
         setBalance(newBalance);
         console.log("New Balance:",newBalance);
     }
