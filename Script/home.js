@@ -49,3 +49,15 @@ document.querySelector("#btn-cashout").addEventListener("click",function(event){
         alert("Invalid Password");
     }
 });
+
+// Hide all forms just when browser is loaded.
+document.addEventListener("DOMContentLoaded", function(){
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+    const transferMoney = document.getElementById("transfer-money");
+
+    addMoney.classList.add("hidden");
+    cashout.classList.add("hidden");
+    transferMoney.classList.add("hidden");
+
+})

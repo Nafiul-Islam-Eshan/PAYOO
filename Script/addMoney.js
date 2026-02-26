@@ -1,3 +1,15 @@
+/**
+ * Add money logical steps:
+ * 1- get the bank
+ * 2- get the account number
+ * 3- Get the add money ammount
+ * 4- New balance calculation
+ * 5- get the password and check
+ *  5-1- true:: show an alert and set new balance
+ *  5-2- false:: show an error alert
+ */
+
+
 document.getElementById("btn-add-money").addEventListener("click", function() { 
     // 1- Get the bank
     const addMoneyBank = giveIdTakeInputValue("add-money-bank");

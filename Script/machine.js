@@ -29,3 +29,4 @@ function showUpById(id){
     showup.classList.remove("hidden");
 
 }
+
