@@ -2,6 +2,7 @@
  * Add money logical steps:
  * 1- get the bank
  * 2- get the account number
+ *  2-1- account number validaton
  * 3- Get the add money ammount
  * 4- New balance calculation
  * 5- get the password and check
@@ -13,30 +14,28 @@
 document.getElementById("btn-add-money").addEventListener("click", function() { 
     // 1- Get the bank
     const addMoneyBank = giveIdTakeInputValue("add-money-bank");
-    console.log(`Bank = ${addMoneyBank}`);
+    if(addMoneyBank === "Select A Bank"){
+        alert('Please, select a bank');
+        return;
+    }
     
     // 2- get the account Number
     const accountNumber = giveIdTakeInputValue("add-money-number")
+    // 2-1- account number validaton
     if(accountNumber.length !== 11){
         alert("Invalid account number");
         return;
     }
-    else{
-        console.log(`Account Number = ${accountNumber}`);
-    }
     
     // 3- Get the add money ammount
     const addMoneyAmmount = giveIdTakeInputValue("add-money-amount");
-    console.log(`Add money ammount = ${Number(addMoneyAmmount)}`);
     
     // 4- New balance calculation
     const currentBalance = getBalance();
     const newBalance = currentBalance + Number(addMoneyAmmount);
-    console.log(`New Balance = ${Number(newBalance)}`);
 
     // 5- get the password and check
     const addMoneyPassword = giveIdTakeInputValue("add-money-password")
-    console.log(`Password = ${addMoneyPassword}`);
 
     // 5-1 true:: show an alert and set new balance
     if (addMoneyPassword == "1234"){
