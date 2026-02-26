@@ -4,10 +4,10 @@
     2- Get the amount, validate, convert to number
     3- Get the current balance
     4- Calculate new balance
-      4-1- New balance validation
+       4-1- New balance validation
     5- Get the password and verify
-      5-1 true:: show an alert and set new balance
-      5-2 false:: show an error alert
+       5-1 true:: show an alert and set new balance
+       5-2 false:: show an error alert
  */
 
 document.querySelector("#btn-cashout").addEventListener("click",function(event){
@@ -57,9 +57,11 @@ document.addEventListener("DOMContentLoaded", function(){
     const addMoney = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
     const transferMoney = document.getElementById("transfer-money");
+    const transactions = document.getElementById("transactions");
 
     addMoney.classList.add("hidden");
     cashout.classList.add("hidden");
     transferMoney.classList.add("hidden");
+    transactions.classList.add("hidden");
 
 })

@@ -79,7 +79,7 @@
                 <img src="./assets/opt-5.png" alt="">
                 <p class="">Pay Bill</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col justify-center items-center h-full px-3 py-5">
+            <button onclick="showUpById('transactions')" class="btn btn-primary btn-soft flex-col justify-center items-center h-full px-3 py-5">
                 <img src="./assets/opt-6.png" alt="">
                 <p class="">Transactions</p>
             </button>
@@ -87,6 +87,10 @@
          </div>
     </section>
 
+
+
+
+    
     <!-- Add money form -->
      <section id="add-money" class="bg-base-300 py-5 ">
         <div class="w-11/12 mx-auto"><h2 class="text-xl font-bold">Add Money</h2></div>
@@ -122,6 +126,9 @@
         </div>
      </section>
 
+
+
+
     <!-- Cash out form -->
      <section id="cashout" class="bg-base-300 py-5 ">
         <div class="w-11/12 mx-auto"><h2 class="text-xl font-bold">Cash out</h2></div>
@@ -148,6 +155,9 @@
         </div>
      </section>
 
+
+     
+     
      <!-- Transfer Money form -->
      <section id="transfer-money" class="bg-base-300 py-5 ">
         <div class="w-11/12 mx-auto"><h2 class="text-xl font-bold">Transfer Money</h2></div>
@@ -173,6 +183,19 @@
             </div>
         </div>
      </section>
+
+
+
+
+    <!-- Transactions -->
+     <section id="transactions" class="bg-base-300 py-5 space-y-5">
+        <div class="w-11/12 mx-auto"><h2 class="text-xl font-bold">Transactions</h2></div>
+
+        <div id="transitions-cards" class="card bg-base-100 shadow mt-4 rounded-2xl w-11/12 mx-auto">
+             
+        </div>
+     </section>
+
 
 
      <script src="./Script/machine.js"></script>

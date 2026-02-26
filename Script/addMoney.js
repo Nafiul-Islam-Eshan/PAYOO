@@ -2,12 +2,12 @@
  * Add money logical steps:
  * 1- get the bank
  * 2- get the account number
- *  2-1- account number validaton
+ *    2-1- account number validaton
  * 3- Get the add money ammount
  * 4- New balance calculation
  * 5- get the password and check
- *  5-1- true:: show an alert and set new balance
- *  5-2- false:: show an error alert
+ *    5-1- true:: show an alert and set new balance
+ *    5-2- false:: show an error alert
  */
 
 

@@ -1,15 +1,16 @@
-/**
+/*
  * Money transferring logical steps:
- * 1- get the account number
- *  1-1- Account number validation
- * 2- Get the tranfer money ammount
- * 3- Get the current balance, validate, convert to number
- * 4- New balance calculation
- *  4-1- New balance validation
- * 5- get the password and check
- *  5-1- true:: show an alert and set new balance
- *  5-2- false:: show an error alert
+ *    1- get the account number
+ *       1-1- Account number validation
+ *    2- Get the tranfer money ammount
+ *    3- Get the current balance, validate, convert to number
+ *    4- New balance calculation
+ *       4-1- New balance validation
+ *    5- get the password and check
+ *       5-1- true:: show an alert and set new balance
+ *       5-2- false:: show an error alert
  */
+
 
 document.getElementById("btn-transfer-money").addEventListener("click", function(){
 
